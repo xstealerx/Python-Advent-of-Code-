@@ -1008,10 +1008,29 @@ result = 0
 
 for x in array:
    values=  x.split('x')
-   extra= min(values)
-   length= (2*(int(values[0])+int(values[1])))
-   width=(2*(int(values[0])+int(values[1])))
-   height= (2*(int(values[0])+int(values[2])))
-   result += int(extra) + length + width + height
-
+   l = int(values[0])
+   h = int(values[1])
+   w = int(values[2])
+   # erster Star
+   # width = 2* (w *h)
+   # length = 2* (l*w)
+   # heigth = 2* (l*h)
+   # liste = width, length, heigth
+   # extra = min(liste)
+   # extra = extra/2
+   
+   
+   # extra= int(min(values))
+   # length= (2*(int(values[0])+int(values[1])))
+   # width=(2*(int(values[2])+int(values[1])))
+   # # height= (2*(int(values[0])+int(values[2])))
+   # result = result +( length + width + heigth +extra)
+   result = result + (l*h*w) + (2*l) + (2*h)
+   
+   
 print(result)
+
+#input = """
+# #3x11x24   ->  66 528 144 33  -> 771
+#13x5x19
+#1x9x27
