@@ -33,6 +33,21 @@ for ele in solution:
             sum += i +1 
 
 print(sum)
+## part two 
+part2 = []
+for i in range(0,len(lines),3):
+    
+    for char in lines[i]:
+        for i in range(len(char)):
+            letter = char[i]
+            if(lines[i+1].find(letter)!= -1):
+                if(lines[i+2].find(letter)!= -1):
+                  part2.append(letter)
 
 
-     
+part2_solution = 0    
+for ele in part2:
+    for i in range (52):
+        if(letters[i].find(ele) != -1) :
+            part2_solution += i +1
+print("Lösung Zwei " + str(part2_solution))
